@@ -328,6 +328,7 @@ import GrceryScreen from "./src/BookingScreen/GrceryScreen";
 import IsFav from "./src/screen/IsFav";
 import WelcomeScreen from "./src/components/FirstScreen";
 import AttendedScreen from "./src/BookingScreen/AttendedScreen";
+import OTPScreen from "./src/components/OTPScreen";
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
@@ -434,6 +435,11 @@ const App = () => {
 
           {/* After WelcomeScreen, navigate to the main content */}
           <Stack.Screen name="MainFlow" component={MainFlow} />
+
+
+          <Stack.Screen name="OTPScreen" component={OTPScreen} />
+          
+           
         </Stack.Navigator>
       </NavigationContainer>
     </CartProvider>

@@ -211,7 +211,7 @@ const UserRegister = () => {
     const register = async () => {
         try {
             // Using your provided IPv4 address
-            const response = await axios.post('http://192.168.2.130:5000/api/users/register', { // Replace with your IP address
+            const response = await axios.post('https://api.marasimpex.com/api/users/register', { // Replace with your IP address
                 name, email, phone, address, city, pin, password,
             });
             const { token, userId } = response.data;

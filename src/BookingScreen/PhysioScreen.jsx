@@ -119,7 +119,7 @@ const PhysioScreen = () => {
     };
 
     try {
-      const response = await fetch('http://192.168.2.130:5000/api/bookings', {
+      const response = await fetch('https://api.marasimpex.com/api/bookings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

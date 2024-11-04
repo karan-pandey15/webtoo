@@ -17,7 +17,7 @@ const AccountScreen = () => {
     const fetchCustomerData = async () => {
       try {
         const token = await AsyncStorage.getItem('token'); // Get token from AsyncStorage
-        const response = await fetch('http://192.168.2.130:5000/api/users/profile', {
+        const response = await fetch('https://api.marasimpex.com/api/users/profile', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

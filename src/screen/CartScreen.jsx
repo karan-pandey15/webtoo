@@ -216,7 +216,7 @@ const CartScreen = () => {
   // Function to handle Razorpay payment
   const handleRazorpayPayment = async () => {
     try {
-      const response = await fetch("http://172.18.80.1:5000/api/orders/create-order", {
+      const response = await fetch("https://api.marasimpex.com/api/orders/create-order", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -260,7 +260,7 @@ const CartScreen = () => {
   
   const checkoutbtn = async () => {
     try {
-      const response = await fetch('http://172.18.80.1:5000/api/orders/checkout', {
+      const response = await fetch('https://api.marasimpex.com/api/orders/checkout', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -295,7 +295,7 @@ const CartScreen = () => {
   };
   const handleCheckout = async () => {
     try {
-      const response = await fetch("http://172.18.80.1:5000/api/orders/checkout", {
+      const response = await fetch("https://api.marasimpex.com/api/orders/checkout", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

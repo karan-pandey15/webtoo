@@ -1,14 +1,12 @@
  
-
-
-
+ 
 import React, { useState } from "react";
 import { StyleSheet, TextInput, View, FlatList, Text, TouchableOpacity } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { useNavigation } from "@react-navigation/native"; // Navigation hook
 
 const categories = [
-  "Attended Driver",
+  "Book a Attended",
   "Driving Teacher",
   "Gym Trainer",
   "Skating Trainer",
@@ -19,8 +17,11 @@ const categories = [
   "Milk & Bread",
   "Grocery",
   "Kids School Lunch",
-  "Solar Hotel",
-  "Kids Fashion"
+  "Solar",
+  "Nurse",
+  "Physio Therapist",
+  "Event Crews",
+  "Driver", 
 ];
 
 const SearchHeader = ({ height, width }) => {
@@ -47,8 +48,8 @@ const SearchHeader = ({ height, width }) => {
     setFilteredCategories([]); // Clear the filtered list
     // Navigation based on the selected category (Use "#" for now)
     switch (category) {
-      case "Attended Driver":
-        navigation.navigate("#"); // Replace "#" with your actual page name
+      case "Book a Attended":
+        navigation.navigate("AttendedScreen"); // Replace "#" with your actual page name
         break;
       case "Driving Teacher":
         navigation.navigate("DrivingTeacherScreen");
@@ -63,7 +64,7 @@ const SearchHeader = ({ height, width }) => {
         navigation.navigate("BoxingCoachScreen");
         break;
       case "Tuition Teacher":
-        navigation.navigate("#");
+        navigation.navigate("TeacherScreen");
         break;
       case "Dance Teacher":
         navigation.navigate("DanceTeacherScreen");
@@ -78,14 +79,21 @@ const SearchHeader = ({ height, width }) => {
         navigation.navigate("GrceryScreen");
         break;
       case "Kids School Lunch":
-        navigation.navigate("#");
+        navigation.navigate("KidsLunchScreen");
         break;
       case "Solar Enquiry":
         navigation.navigate("SolarEnquiryScreen");
         break;
-      case "Kids Fashion":
-        navigation.navigate("#");
+      case "Nurse":
+        navigation.navigate("NurseScreen");
         break;
+        case "Physio Therapist":
+          navigation.navigate("PhysioScreen");
+          break;
+
+          case "Driver":
+            navigation.navigate("DriverScreen");
+            break;
       default:
         break;
     }

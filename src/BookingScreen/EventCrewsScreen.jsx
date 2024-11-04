@@ -324,7 +324,7 @@ const EventCrewData = [
     rating: 4.8,
     reviews: 30,
     description: 'Experienced crew for setting up stages, booths, and event decor to ensure a smooth start to your event.',
-    imageUrl: null,
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Vsr5G6i-XtkDVH5fKYV5EoV7DT5kphUvCw&s",
   },
   {
     id: '2',
@@ -333,7 +333,7 @@ const EventCrewData = [
     rating: 4.5,
     reviews: 40,
     description: 'Friendly and professional staff to handle guest registration and check-in processes.',
-    imageUrl: null,
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Vsr5G6i-XtkDVH5fKYV5EoV7DT5kphUvCw&s",
   },
   {
     id: '3',
@@ -383,7 +383,7 @@ const EventCrewsScreen = () => {
   const handleAdd = async () => {
     if (selectedItem && address) {
       try {
-        const response = await fetch('http://172.18.80.1:5000/api/crewbookings', {
+        const response = await fetch('https://api.marasimpex.com/api/crewbookings', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
