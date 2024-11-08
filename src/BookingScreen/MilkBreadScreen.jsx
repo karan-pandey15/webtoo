@@ -1,16 +1,13 @@
  
 
+
+
 // import {
 //     FlatList,
-//     Image, 
 //     StyleSheet,
-//     Text,
-//     TextInput,
 //     View,
-//     TouchableOpacity,
 // } from "react-native";
 // import React, { useState } from "react";
-// import LinearGradient from "react-native-linear-gradient";
 // import { useNavigation } from "@react-navigation/native";
 // import data from "../data/data.json";  // Assuming you have product data in this file
 // import ProductCard from "../components/ProductCard";
@@ -19,7 +16,7 @@
 // const MilkBreadScreen = () => {
 //     const [products, setProducts] = useState(data.products);
 //     const navigation = useNavigation();
-    
+
 //     const handleProductDetails = (item) => {
 //         navigation.navigate("PRODUCT_DETAILS", { item });
 //     };
@@ -37,30 +34,23 @@
 
 //     return (
 //         <>
-//         <Header />
-//         <View style={styles.container}>
-           
-//             <FlatList
-//                 ListHeaderComponent={
-//                     <View style={styles.header}>
-                      
-//                     </View>
-                    
-//                 }
-//                 data={products}
-//                 numColumns={2}
-//                 renderItem={({ item }) => (
-//                     <ProductCard
-//                         item={item}
-//                         handleProductClick={handleProductDetails}
-//                         toggleFavorite={toggleFavorite}
-//                     />
-//                 )}
-//                 keyExtractor={(item) => item.id.toString()}
-//                 showsVerticalScrollIndicator={false}
-//                 columnWrapperStyle={styles.columnWrapper}
-//             />
-//         </View>
+//             <Header />
+//             <View style={styles.container}>
+//                 <FlatList
+//                     data={products}
+//                     numColumns={2}
+//                     renderItem={({ item }) => (
+//                         <ProductCard
+//                             item={item}
+//                             handleProductClick={handleProductDetails}
+//                             toggleFavorite={toggleFavorite}
+//                         />
+//                     )}
+//                     keyExtractor={(item) => item.id.toString()}
+//                     showsVerticalScrollIndicator={false}
+//                     columnWrapperStyle={styles.columnWrapper}
+//                 />
+//             </View>
 //         </>
 //     );
 // };
@@ -70,45 +60,15 @@
 // const styles = StyleSheet.create({
 //     container: {
 //         flex: 1,
-//         backgroundColor: "#FFFFFF",  // Light blue background
-//         paddingHorizontal: 16,
+//         backgroundColor: "#fff",  // Light background color for a clean look
+//         paddingHorizontal: 30,
 //         paddingTop: 16,
-//     },
-//     header: {
-//         marginBottom: 16,
-//     },
-//     headingText: {
-//         fontSize: 24,
-//         color: "#007AFF",  // Blue color for heading
-//         marginBottom: 12,
-//         fontFamily: "Poppins-SemiBold",
-//     },
-//     inputContainer: {
-//         flexDirection: "row",
-//         alignItems: "center",
-//         backgroundColor: "#FFFFFF",  // White background for search bar
-//         borderRadius: 12,
-//         paddingHorizontal: 12,
-//         height: 48,
-//     },
-//     searchIcon: {
-//         height: 24,
-//         width: 24,
-//         tintColor: "#007AFF",  // Blue search icon
-//         marginRight: 8,
-//     },
-//     textInput: {
-//         flex: 1,
-//         fontSize: 16,
-//         fontFamily: "Poppins-Regular",
-//         color: "#000",
 //     },
 //     columnWrapper: {
 //         justifyContent: "space-between",
 //         marginBottom: 16,
 //     },
 // });
-
 
 
 
@@ -148,7 +108,7 @@ const MilkBreadScreen = () => {
             <View style={styles.container}>
                 <FlatList
                     data={products}
-                    numColumns={2}
+                    numColumns={2} // Two columns for the product grid
                     renderItem={({ item }) => (
                         <ProductCard
                             item={item}
@@ -169,13 +129,13 @@ export default MilkBreadScreen;
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: "#fff",  // Light background color for a clean look
-        paddingHorizontal: 30,
+        // flex: 1,
+        backgroundColor: "#fff",
+        paddingHorizontal: 40, // Reduced horizontal padding
         paddingTop: 16,
     },
     columnWrapper: {
-        justifyContent: "space-between",
-        marginBottom: 16,
+        justifyContent: "space-between", // Space between columns
+        marginBottom: 12, // Reduced space between rows
     },
 });

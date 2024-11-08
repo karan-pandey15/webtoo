@@ -1,8 +1,5 @@
  
-
-
-import { useNavigation } from '@react-navigation/native';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   SafeAreaView,
   View,
@@ -14,13 +11,15 @@ import {
   Alert,
 } from 'react-native';
 import axios from 'axios';
+import { useNavigation } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const WelcomeScreen = () => {
   const [phoneNumber, setPhoneNumber] = useState(Array(10).fill(''));
   const navigation = useNavigation();
 
   const sendOTP = async () => {
-    const fullPhoneNumber = '+91' + phoneNumber.join(''); // Combine +91 prefix and the entered digits
+    const fullPhoneNumber = '+91' + phoneNumber.join('');
     if (fullPhoneNumber.length !== 13) {
       Alert.alert('Error', 'Please enter a valid 10-digit phone number');
       return;
@@ -37,18 +36,32 @@ const WelcomeScreen = () => {
   };
 
   const handleInputChange = (text, index) => {
-    if (text.length > 1) return; // Allow only one digit in each box
+    if (text.length > 1) return;
     const updatedPhoneNumber = [...phoneNumber];
     updatedPhoneNumber[index] = text;
     setPhoneNumber(updatedPhoneNumber);
 
-    // Move to the next box if user types a digit
     if (text && index < 9) {
       const nextInput = `input-${index + 1}`;
       const inputRef = textInputRefs[nextInput];
       inputRef && inputRef.focus();
     }
   };
+
+  const checkToken = async () => {
+    try {
+      const token = await AsyncStorage.getItem('otpToken');
+      if (token) {
+        navigation.replace('MainFlow');
+      }
+    } catch (e) {
+      console.log('Failed to fetch token', e);
+    }
+  };
+
+  useEffect(() => {
+    checkToken();
+  }, []);
 
   const textInputRefs = {};
 
@@ -57,7 +70,7 @@ const WelcomeScreen = () => {
       <Text style={styles.title}>OTP Verification</Text>
       <View style={styles.imageContainer}>
         <Image source={require('./../assets/images/firstscreenimg.jpg')} style={styles.image} />
-      </View> 
+      </View>
       <Text style={styles.subtitle}>Enter your 10-digit phone number</Text>
       <View style={styles.phoneInputContainer}>
         {Array.from({ length: 10 }).map((_, index) => (
@@ -100,9 +113,8 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 30,
     fontWeight: 'bold',
-    color: '#333',  
-    color:'#00b0ff',
-    marginTop:10
+    color: '#00b0ff',
+    marginTop: 10,
   },
   subtitle: {
     fontSize: 14,
@@ -124,7 +136,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 18,
     color: '#333',
-    margin:4,
+    margin: 3,
   },
   button: {
     backgroundColor: '#00b0ff',

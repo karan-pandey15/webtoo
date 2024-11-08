@@ -71,7 +71,7 @@ const HomeScreen = () => {
       <FlatList
         ListHeaderComponent={
           <> 
-          <SearchHeader />
+          
             <RoundTags /> 
           </>
         }

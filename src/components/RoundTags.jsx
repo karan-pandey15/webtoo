@@ -3,6 +3,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, Dimensions } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import Banner from './Banner';
 
 const RoundTags = () => {
   const navigation = useNavigation();
@@ -20,12 +21,12 @@ const RoundTags = () => {
 
       <View style={styles.row}>
         <ImageContainer name="Attendant" imageSource={require('../assets/images/attendedimg.jpg')} onPress={() => handleImagePress('AttendedScreen')} />
-        <ImageContainer name="Nurse" imageSource={require('../assets/images/nurse.jpeg')} onPress={() => handleImagePress('NurseScreen')}/>
+        <ImageContainer name="Nurse" imageSource={require('../assets/images/nurse.jpeg')} onPress={() => handleImagePress('NurseScreen')} />
 
         <ImageContainer name="Physio therapist" imageSource={require('../assets/images/physiio.png')} onPress={() => handleImagePress('PhysioScreen')} />
         <ImageContainer name="Event Crews" imageSource={require('../assets/images/evnetcrieww.png')} onPress={() => handleImagePress('EventCrewsScreen')} />
 
-        
+
       </View>
 
       <View style={styles.row}>
@@ -33,7 +34,7 @@ const RoundTags = () => {
         <ImageContainer name="Boxing Coach" imageSource={require('../assets/images/boxing.jpeg')} onPress={() => handleImagePress('BoxingCoachScreen')} />
         <ImageContainer name="Driving Teacher" imageSource={require('../assets/images/driver.jpeg')} onPress={() => handleImagePress('DrivingTeacherScreen')} />
         <ImageContainer name="Tution Teacher" imageSource={require('../assets/images/tutionteacher.jpeg')} onPress={() => handleImagePress('TeacherScreen')} />
-        
+
       </View>
 
       {/* <View style={styles.row}>
@@ -43,25 +44,39 @@ const RoundTags = () => {
 
       </View> */}
 
+
       <View style={styles.row}>
-        
-      <ImageContainer name="Gym Trainer" imageSource={require('../assets/images/gym.jpeg')} onPress={() => handleImagePress('TrainerScreen')} />
+
+
+
+        <ImageContainer name="Gym Trainer" imageSource={require('../assets/images/gym.jpeg')} onPress={() => handleImagePress('TrainerScreen')} />
         <ImageContainer name="Driver" imageSource={require('../assets/images/taxi.jpeg')} onPress={() => handleImagePress('DriverScreen')} />
 
         <ImageContainer name="Dance Teacher" imageSource={require('../assets/images/danceteacher.jpeg')} onPress={() => handleImagePress('DanceTeacherScreen')} />
         {/* <ImageContainer name="Driver" imageSource={require('../assets/images/taxi.jpeg')} onPress={() => handleImagePress('DriverScreen')} /> */}
-        
-        
-<ImageContainer name=" Coming Soon" imageSource={require('../assets/images/comingsoon.png')} onPress={() => handleImagePress('#')} />
-        
+
+
+        <ImageContainer name="Mehndi Artist" imageSource={require('../assets/images/mehndi.png')} onPress={() => handleImagePress('MehndiScreen')} />
+
+
+      </View>
+
+      <View>
+
+        {/* Title for "Our Product" */}
+        <Text style={styles.sectionTitle}>
+          Best Sports Academy
+        </Text>
+
+        <Banner />
       </View>
 
 
-
       {/* Title for "Our Product" */}
-      <Text style={styles.sectionTitle}>
+      <Text style={styles.sectionTit}>
         Fresh Dairy Products
       </Text>
+
 
       <View style={styles.row}>
         <ImageContainer name="Milk & Bread" imageSource={require('../assets/images/milkimgg.jpg')} onPress={() => handleImagePress('MilkBreadScreen')} />
@@ -100,19 +115,20 @@ const RoundTags = () => {
         <ImageContainer name=" Coming Soon" imageSource={require('../assets/images/comingsoon.png')} onPress={() => handleImagePress('#')} />
       </View>
 
-      
-      <Text style={styles.sectionTitle}>
-      Enquiry Category
+    <View  style={{marginBottom:140}} ></View>
+
+      {/* <Text style={styles.sectionTitle}>
+        Enquiry Category
       </Text>
 
       <View style={styles.row}>
-        
-      <ImageContainer
+
+        <ImageContainer
           name="Solar Enquiry"
           imageSource={require('../assets/images/solar.jpg')}
           onPress={() => handleImagePress('SolarEnquiryScreen')}
         />
-        
+
         <ImageContainer name=" Coming Soon" imageSource={require('../assets/images/comingsoon.png')} onPress={() => handleImagePress('#')} />
         <ImageContainer name=" Coming Soon" imageSource={require('../assets/images/comingsoon.png')} onPress={() => handleImagePress('#')} />
         <ImageContainer name=" Coming Soon" imageSource={require('../assets/images/comingsoon.png')} onPress={() => handleImagePress('#')} />
@@ -121,7 +137,7 @@ const RoundTags = () => {
 
 
       </View>
-      
+
 
 
 
@@ -129,7 +145,7 @@ const RoundTags = () => {
 
       <Text style={styles.sectionTitle}>
         Hotel Booking
-      </Text>
+      </Text> */}
 
       {/* <ImageContainer name="Nurse" imageSource={require('../assets/images/tutionteacher.jpeg')} onPress={() => handleImagePress('#')} /> */}
     </View>
@@ -153,7 +169,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 10,
-    paddingTop: 20,
     backgroundColor: "#fff",
   },
   sectionTitle: {
@@ -164,6 +179,17 @@ const styles = StyleSheet.create({
     textAlign: 'left',     // Align text to the left
     width: '100%',         // Full width
   },
+
+  sectionTit: {
+    fontSize: 24,          // Larger text size
+    fontWeight: 'bold',    // Bold text
+    color: '#333',         // Darker color for contrast
+    marginVertical: 10,    // Margin above and below the text
+    textAlign: 'left',     // Align text to the left
+    width: '100%',         // Full width
+    marginTop:40
+  },
+  
   row: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',  // Distribute space evenly between items

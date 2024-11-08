@@ -42,14 +42,7 @@ const GrceryScreen = () => {
             <FlatList
                 ListHeaderComponent={
                     <View style={styles.header}>
-                        {/* <View style={styles.inputContainer}>
-                            <Image
-                                source={require("../assets/search.png")}  // Update this path as needed
-                                style={styles.searchIcon}
-                            />
-                            <TextInput placeholder="Search" style={styles.textInput} />
-                        </View>
-                         */}
+        
                     </View>
                     
                 }

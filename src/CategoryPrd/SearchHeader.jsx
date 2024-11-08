@@ -1,5 +1,7 @@
  
- 
+
+
+
 import React, { useState } from "react";
 import { StyleSheet, TextInput, View, FlatList, Text, TouchableOpacity } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
@@ -22,6 +24,9 @@ const categories = [
   "Physio Therapist",
   "Event Crews",
   "Driver", 
+  "Mehndi",
+  "Book Guardian For Kids",
+  "Book Attendant For Parents"
 ];
 
 const SearchHeader = ({ height, width }) => {
@@ -44,12 +49,16 @@ const SearchHeader = ({ height, width }) => {
 
   // Handle category selection
   const handleCategorySelect = (category) => {
-    setSearchQuery(category); // Set the search query to the selected category
+    // Clear the search bar input
+    setSearchQuery("");
     setFilteredCategories([]); // Clear the filtered list
+
     // Navigation based on the selected category (Use "#" for now)
     switch (category) {
       case "Book a Attended":
-        navigation.navigate("AttendedScreen"); // Replace "#" with your actual page name
+      case "Book Guardian For Kids":
+      case "Book Attendant For Parents":
+        navigation.navigate("AttendedScreen"); 
         break;
       case "Driving Teacher":
         navigation.navigate("DrivingTeacherScreen");
@@ -76,7 +85,7 @@ const SearchHeader = ({ height, width }) => {
         navigation.navigate("MilkBreadScreen");
         break;
       case "Grocery":
-        navigation.navigate("GrceryScreen");
+        navigation.navigate("GroceryScreen");
         break;
       case "Kids School Lunch":
         navigation.navigate("KidsLunchScreen");
@@ -87,20 +96,22 @@ const SearchHeader = ({ height, width }) => {
       case "Nurse":
         navigation.navigate("NurseScreen");
         break;
-        case "Physio Therapist":
-          navigation.navigate("PhysioScreen");
-          break;
-
-          case "Driver":
-            navigation.navigate("DriverScreen");
-            break;
+      case "Physio Therapist":
+        navigation.navigate("PhysioScreen");
+        break;
+      case "Driver":
+        navigation.navigate("DriverScreen");
+        break;
+      case "Mehndi":
+        navigation.navigate("MehndiScreen");
+        break;
       default:
         break;
     }
   };
 
   return (
-    <View style={{ alignItems: "center" }}>
+    <View style={{ alignItems: "center", padding: 10 }}>
       <View style={[styles.searchContainer, { height: height, width: width }]}>
         {/* Search Icon */}
         <Ionicons name="search-outline" size={20} color="#a9a9a9" style={styles.icon} />
@@ -152,10 +163,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 5,
     elevation: 3,
-    alignSelf: "center", // Ensures the component is centered horizontally
-    marginBottom:5,
-
-    marginTop:10
+    alignSelf: "center", // Ensures the component is centered horizontally 
+    marginTop:5,
   },
   input: {
     flex: 1,
