@@ -87,9 +87,13 @@ const MilkBreadScreen = () => {
     const [products, setProducts] = useState(data.products);
     const navigation = useNavigation();
 
+    // const handleProductDetails = (item) => {
+    //     navigation.navigate("PRODUCT_DETAILS", { item });
+    // };
+
     const handleProductDetails = (item) => {
-        navigation.navigate("PRODUCT_DETAILS", { item });
-    };
+        Alert.alert("Coming Soon", ` ${item.name} will be available soon.`);
+      };
 
     const toggleFavorite = (item) => {
         setProducts(

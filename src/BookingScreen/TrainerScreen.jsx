@@ -463,7 +463,7 @@ const services = [
   {
     id: '2',
     type: 'Group Fitness Class',
-    price: '₹600 (Per Person)',
+    price: '₹999 (Per Person)',
     time: '1 hr',
     description: 'Join a fun and energetic group class led by a certified trainer focusing on various workout styles.',
     imageUrl: 'https://example.com/image2.jpg',
@@ -471,7 +471,7 @@ const services = [
   {
     id: '3',
     type: 'Nutrition Coaching',
-    price: '₹1,500',
+    price: '₹999',
     time: '1 hr',
     description: 'Personalized nutrition plan and coaching session to help you achieve your health and fitness goals.',
     imageUrl: 'https://example.com/image3.jpg',

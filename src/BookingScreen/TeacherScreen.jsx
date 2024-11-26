@@ -21,62 +21,7 @@ const teachers = [
     description: 'Experienced in teaching English grammar, literature, and essay writing for all grades.',
     imageUrl: 'https://example.com/teacher2.jpg',
   },
-  {
-    id: '3',
-    name: 'Mr. Rahul Joshi',
-    subject: 'Science (Class 5 - 10)',
-    price: '₹1,500 per month',
-    description: 'Focus on Physics, Chemistry, and Biology concepts for middle school students.',
-    imageUrl: 'https://example.com/teacher3.jpg',
-  },
-  {
-    id: '4',
-    name: 'Ms. Kavita Singh',
-    subject: 'History (Class 6 - 10)',
-    price: '₹1,200 per month',
-    description: 'In-depth teaching of ancient, medieval, and modern history.',
-    imageUrl: 'https://example.com/teacher4.jpg',
-  },
-  {
-    id: '5',
-    name: 'Ms. Priya Gupta',
-    subject: 'Geography (Class 5 - 10)',
-    price: '₹1,400 per month',
-    description: 'Specialized in teaching geographical concepts and map reading.',
-    imageUrl: 'https://example.com/teacher5.jpg',
-  },
-  {
-    id: '6',
-    name: 'Mr. Vikash Tiwari',
-    subject: 'Hindi (Class 1 - 12)',
-    price: '₹1,600 per month',
-    description: 'Specialist in Hindi grammar and literature for CBSE, ICSE, and UP Board.',
-    imageUrl: 'https://example.com/teacher6.jpg',
-  },
-  {
-    id: '7',
-    name: 'Mr. Sameer Khan',
-    subject: 'Computer Science (Class 9 - 12)',
-    price: '₹2,200 per month',
-    description: 'Expert in programming, algorithms, and computer networks.',
-    imageUrl: 'https://example.com/teacher7.jpg',
-  },
-  {
-    id: '8',
-    name: 'Ms. Nidhi Singh',
-    subject: 'Economics (Class 11 - 12)',
-    price: '₹2,500 per month',
-    description: 'Experienced in micro and macroeconomics for higher secondary students.',
-    imageUrl: 'https://example.com/teacher8.jpg',
-  },
-  {
-    id: '9',
-    name: 'Mr. Alok Verma',
-    subject: 'Chemistry (Class 9 - 12)',
-    price: '₹2,300 per month',
-    description: 'Focuses on organic, inorganic, and physical chemistry.',
-    imageUrl: 'https://example.com/teacher9.jpg',
-  },
+   
 ];
 
 const TeacherScreen = () => {
@@ -164,7 +109,7 @@ const TeacherScreen = () => {
         {showFilters && (
           <View>
             {/* Gender Filter */}
-            <Text style={styles.filterLabel}>Select Gender:</Text>
+            <Text style={styles.filterLabel}>Select Teacher Gender:</Text>
             <View style={styles.filterRow}>
               <TouchableOpacity
                 style={[styles.filterButton, genderFilter === 'Male' && styles.selectedFilter]}

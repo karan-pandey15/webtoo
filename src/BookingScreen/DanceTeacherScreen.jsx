@@ -8,7 +8,7 @@ const services = [
   {
     id: '1',
     type: 'Private Dance Lesson (1-on-1)',
-    price: '₹600',
+    price: '₹499',
     time: '1 hr',
     description: 'One-on-one dance lesson tailored to your skill level and preferred dance style, whether it’s contemporary, hip-hop, or ballroom.',
     imageUrl: 'https://example.com/dance1.jpg', // Replace with a suitable dance-related image URL
@@ -16,7 +16,7 @@ const services = [
   {
     id: '2',
     type: 'Group Dance Class',
-    price: '₹400',
+    price: '₹499',
     time: '1 hr',
     description: 'Fun and energetic group dance class led by an experienced instructor, covering different dance styles such as salsa, jazz, and hip-hop.',
     imageUrl: 'https://example.com/dance2.jpg', // Replace with a suitable dance-related image URL
@@ -24,7 +24,7 @@ const services = [
   {
     id: '3',
     type: 'Wedding Choreography',
-    price: '₹1,500',
+    price: '₹499',
     time: '1.5 hr',
     description: 'Customized dance choreography for weddings or special events, designed to suit your skill level and make your event memorable.',
     imageUrl: 'https://example.com/dance3.jpg', // Replace with a suitable dance-related image URL

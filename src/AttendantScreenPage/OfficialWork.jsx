@@ -21,7 +21,7 @@ const OfficialWork = () => {
         {/* Service Title and Price */}
         <View style={styles.infoContainer}>
           <Text style={styles.title}>Official Work Assistance</Text>
-          <Text style={styles.price}>₹500 / day</Text>
+          <Text style={styles.price}>₹399 / day</Text>
           <Text style={styles.taxInfo}>(Inclusive of all taxes)</Text>
         </View>
 

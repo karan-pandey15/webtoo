@@ -486,7 +486,7 @@ const services = [
   {
     id: '4',
     type: 'Advanced Sparring Session',
-    price: '₹600',
+    price: '₹499',
     time: '1 hr',
     description: 'An intensive sparring session for experienced boxers looking to refine their skills and techniques under expert guidance.',
     imageUrl: 'https://example.com/boxing4.jpg', // Replace with a suitable boxing-related image URL

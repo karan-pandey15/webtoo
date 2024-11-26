@@ -66,6 +66,11 @@ import OfficialWork from "./src/AttendantScreenPage/OfficialWork";
 import TravellingWithParents from "./src/AttendantScreenPage/TravellingWithParents";
 import MehndiDisplayScreen from "./src/BookingScreen/MehndiDisplayScreen";
 import FirstPage from "./src/components/FirstPage";
+import OrderScreen from "./src/AttendantScreenPage/OrderScreen";
+import AcademyDisplayScreen from "./src/BookingScreen/AcademyDisplayScreen";
+import SportsScreenDisplay from "./src/SportsScreen/SportsDashoard";
+import SportsDashoard from "./src/SportsScreen/SportsDashoard";
+import SportsRoundTag from "./src/components/SportsRoundTag";
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
@@ -112,14 +117,21 @@ const MyHomeStack = () => {
       <Stack.Screen name="NurseScreen" component={NurseScreen} />
       <Stack.Screen name="PhysioScreen" component={PhysioScreen} /> 
       <Stack.Screen name="EventCrewsScreen" component={EventCrewsScreen} /> 
-      <Stack.Screen name="MehndiScreen" component={MehndiScreen} /> 
-
-      <Stack.Screen name="MehndiDisplayScreen" component={MehndiDisplayScreen} />
+      <Stack.Screen name="MehndiScreen" component={MehndiScreen} />  
+      <Stack.Screen name="MehndiDisplayScreen" component={MehndiDisplayScreen} /> 
+      <Stack.Screen name="AcademyDisplayScreen" component={AcademyDisplayScreen} />
+      <Stack.Screen name="SportsScreenDisplay" component={SportsScreenDisplay} />
+      <Stack.Screen name="SportsDashboard" component={SportsDashoard} />  
+      <Stack.Screen name="OrderScreen" component={OrderScreen} />
+      
 
 
       {/* SportS screen page  */}
- 
+
+      <Stack.Screen name="SportsRoundTag" component={SportsRoundTag} /> 
+      
       <Stack.Screen name="CricketScreen" component={CricketScreen} /> 
+
       <Stack.Screen name="HokeyScreen" component={HokeyScreen} /> 
       <Stack.Screen name="FoodballScreen" component={FoodballScreen} /> 
       <Stack.Screen name="TennisScreen" component={TennisScreen} /> 
@@ -141,35 +153,6 @@ const MyHomeStack = () => {
       <Stack.Screen name="ShoppingAssistance" component={ShoppingAssistance} />  
       <Stack.Screen name="OfficialWork" component={OfficialWork} />  
       <Stack.Screen name="TravellingWithParents" component={TravellingWithParents} />  
-      
-      
-
-       
-      
-
-       
-
-       
-      
-
-
-
-       
-      
-      
-
-       
-
-       
-      
-      
-       
-
-       
-
-
-
-       
       
        
     </Stack.Navigator>
@@ -241,8 +224,7 @@ const App = () => {
 
           {/* After WelcomeScreen, navigate to the main content */}
           <Stack.Screen name="MainFlow" component={MainFlow} />
-          
-          {/* <Stack.Screen name="OTPScreen" component={OTPScreen} /> */}
+          <Stack.Screen name="OTPScreen" component={OTPScreen} />
           
            
         </Stack.Navigator>

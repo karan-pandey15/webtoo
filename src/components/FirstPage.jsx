@@ -54,13 +54,17 @@ const FirstPage = () => {
 
       {/* Buttons Row */}
       <View style={styles.buttonRow}>
+
+      <TouchableOpacity style={styles.button} onPress={handleSkipPress}>
+          <Text style={styles.buttonText}>Skip</Text>
+        </TouchableOpacity>
+        
+
         <TouchableOpacity style={styles.button} onPress={handleLoginPress}>
           <Text style={styles.buttonText}>Register</Text>
         </TouchableOpacity>
         
-        <TouchableOpacity style={styles.button} onPress={handleSkipPress}>
-          <Text style={styles.buttonText}>Skip</Text>
-        </TouchableOpacity>
+         
       </View>
 
       {/* Join as Partner Section */}
@@ -73,10 +77,7 @@ const FirstPage = () => {
 
       {/* Made in India Section */}
       <View style={styles.footer}>
-        <Text style={styles.footerText}>Made in India by </Text>
-        <Text style={styles.footerText}>
-          <Icon name="heart" size={26} color="#1E90FF" />
-        </Text>
+        <Text style={styles.footerText}>. </Text>
       </View>
     </LinearGradient>
   );
@@ -102,6 +103,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     width: '80%',
     marginBottom: 40,
+    marginTop:100
   },
   button: {
     backgroundColor: '#1E90FF', // Light blue color for button
@@ -119,6 +121,7 @@ const styles = StyleSheet.create({
   partnerRow: {
     flexDirection: 'row',
     alignItems: 'center',
+    marginTop:100
   },
   partnerText: {
     fontSize: 20,

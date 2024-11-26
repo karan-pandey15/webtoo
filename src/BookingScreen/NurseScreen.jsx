@@ -19,13 +19,35 @@ const services = [
     id: '2',
     type: 'Injection Service',
     price: '₹400',
-    time: '15 min',
+    time: '30 min',
     description: 'Professional injection administration at your home for prescribed medications or vaccinations.',
     imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDm3TlC7xsEACgFTFJ4rpSxuNa15jPdVLWRw&s',
+  },
+  {
+    id: '3',
+    type: 'Major Dressing',
+    price: '₹500',
+    time: '60 min',
+    description: 'Professional injection administration at your home for prescribed Dressing .',
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzbjggbmQ-pPDjy_9De9nk1v4b46K_cZdFbQ&s',
   },
 ];
 
 const NurseScreen = () => {
+
+  
+  useEffect(() => {
+    const fetchAddressFromStorage = async () => {
+      try {
+        const storedAddress = await AsyncStorage.getItem('address');
+        if (storedAddress) setAddress(storedAddress);
+      } catch (error) {
+        Alert.alert('Error', 'Failed to load address from storage');
+      }
+    };
+    fetchAddressFromStorage();
+  }, []);
+
   const navigation = useNavigation();
   const [modalVisible, setModalVisible] = useState(false);
   const [urgent, setUrgent] = useState(false);
@@ -33,6 +55,8 @@ const NurseScreen = () => {
   const [loginModalVisible, setLoginModalVisible] = useState(false);
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
+
+  const [address, setAddress] = useState('');
 
   const [addressDetails, setAddressDetails] = useState({
     houseNumber: '',
@@ -198,11 +222,18 @@ const NurseScreen = () => {
               value={addressDetails.houseNumber}
               onChangeText={(text) => setAddressDetails({ ...addressDetails, houseNumber: text })}
             />
-            <TextInput
+            {/* <TextInput
               style={styles.input}
               placeholder="Complete Address"
               value={addressDetails.landmark}
               onChangeText={(text) => setAddressDetails({ ...addressDetails, landmark: text })}
+            /> */}
+
+<TextInput
+              placeholder="Address"
+              value={address}
+              onChangeText={setAddress}
+              style={styles.input}
             />
             <TextInput
               style={styles.input}

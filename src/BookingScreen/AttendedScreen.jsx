@@ -23,7 +23,7 @@ const AttendedScreen = () => {
 
         <View style={styles.row}>
           <ImageContainer name="Dropping School, Tution" imageSource={require('../assets/images/dripingscl.jpeg')} onPress={() => handleImagePress('DroppingSchool')} />
-          <ImageContainer name="Shopping and Market Assistance" imageSource={require('../assets/images/shpping.png')} onPress={() => handleImagePress('ShoppingMarket')} />
+          <ImageContainer name="Shopping and Market Assistance" imageSource={require('../assets/images/shpping.png')} onPress={() => handleImagePress('ShoppingAssistance')} />
           <ImageContainer name="Travelling With Kids" imageSource={require('../assets/images/travellingkid.jpeg')} onPress={() => handleImagePress('TravellingwithKids')} />
         </View>
 
@@ -39,7 +39,7 @@ const AttendedScreen = () => {
         <View style={styles.row}>
           <ImageContainer name="For Hospital Visit" imageSource={require('../assets/images/hospitavisit.jpeg')} onPress={() => handleImagePress('ForHospitalVisit')} />
           <ImageContainer name="For Shopping Assistance" imageSource={require('../assets/images/shpping.png')} onPress={() => handleImagePress('ShoppingAssistance')} />
-          <ImageContainer name="For Official Work" imageSource={require('../assets/images/official.png')} onPress={() => handleImagePress('OfficialWork')} />
+          <ImageContainer name="For Official Work" imageSource={require('../assets/images/official.png')} onPress={() => handleImagePress('#')} />
         </View>
 
         <View style={styles.row}>

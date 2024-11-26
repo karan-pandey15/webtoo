@@ -62,11 +62,11 @@ import { useNavigation } from '@react-navigation/native';
 const Banner = () => {
   const navigation = useNavigation();
   const images = [
-    { id: 1, source: require('../assets/images/cricket.jpeg'), navigateTo: 'CricketScreen' },
-    { id: 2, source: require('../assets/images/hokeyy.jpeg'), navigateTo: 'HokeyScreen' },
-    { id: 3, source: require('../assets/images/basketball.png'), navigateTo: 'basketballScreen' },
-    { id: 4, source: require('../assets/images/tennis.jpeg'), navigateTo: 'TennisScreen' },
-    { id: 5, source: require('../assets/images/football.jpeg'), navigateTo: 'FoodballScreen' },
+    { id: 1, source: require('../assets/images/cricket.jpeg'), navigateTo: 'SportsRoundTag' },
+    { id: 2, source: require('../assets/images/hokeyy.jpeg'), navigateTo: 'SportsRoundTag' },
+    { id: 3, source: require('../assets/images/basketball.png'), navigateTo: 'SportsRoundTag' },
+    { id: 4, source: require('../assets/images/tennis.jpeg'), navigateTo: 'SportsRoundTag' },
+    { id: 5, source: require('../assets/images/football.jpeg'), navigateTo: 'SportsRoundTag' },
   ];
 
   return (
